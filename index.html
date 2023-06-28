@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+	  width: 100%;
+	  margin-bottom: 25px;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+	
+	#header-img img {width: 500px;margin-bottom: 10px;}
+	  
+	  .container p {margin-bottom: 25px;}
+	  
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div id="header-img"><img src="freedom-header.jpg" width="" height="" alt=""/></div>
+  <p><b>Sorry we missed you.</b><br/>
+This is you enquiry portal. Please fill the fields below with your information and the reason why you have contacted us. A member of our team will contact you soon.</p>
+    <form>
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your full name.." required>
+      </div>
+      <div class="form-group">
+        <label for="policynumber">Policy Number:</label>
+        <input type="text" id="policynumber" name="policynumber" placeholder="Your policy number.." required>
+      </div>
+      <div class="form-group">
+        <label for="preferrednumber">Preferred Number to be Contacted:</label>
+        <input type="tel" id="preferrednumber" name="preferrednumber" placeholder="Your preferred contact number.." required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="reason">Reason for Contact:</label>
+        <textarea id="reason" name="reason" placeholder="Reason for your contact.." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="claimreference">Claim Reference:</label>
+        <input type="text" id="claimreference" name="claimreference" placeholder="Claim reference.." required>
+      </div>
+	  <p>Would you like to upload documents relevant to your request, i.e photographs of your vehicle or the incident scene?</p>
+	  <button type="upload" class="submit-btn">Upload</button>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+	<p style="margin-top: 0px;">XYZ Company<br/>
+	contact@xyzcompany.com<br/>
+	020 79339708
+	</p>
+  </div>
+</body>
+</html>
