@@ -1,0 +1,196 @@
+/*
+    Copyright (c) CaseMaster Technology Ltd. All rights reserved.
+    See LICENSE file in the project root for full license information.
+*/
+
+/* Sidebar overflows */
+
+aside {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* No scroll bar on body when we have a nav bar */
+
+body+nav {
+    overflow: hidden;
+}
+
+/* Scroll bar on main; only when adjacent to nav bar */
+
+nav+main {
+    position: absolute;
+    top: 65px;
+    /* Hard coded X px more than navbar */
+    bottom: 0;
+}
+
+@media (max-width: 992px) {
+    nav+main {
+        bottom: unset;
+    }
+}
+
+main {
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Reduced form group margin */
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+/* Do not transform placeholders */
+
+::placeholder {
+    text-transform: none;
+}
+
+/* Mandatory input(s) */
+
+.form-group.required .control-label:after {
+    content: " *";
+    color: red;
+}
+
+input:required {
+    background-color: rgb(255, 255, 225);
+}
+
+textarea:required {
+    background-color: rgb(255, 255, 225);
+}
+
+input:not(disabled):required:focus {
+    background-color: rgb(255, 255, 225);
+}
+
+/* Mandatory Select2 input(s) */
+
+select:required {
+    background-color: rgb(255, 255, 225);
+}
+
+select:not(disabled):required:focus {
+    background-color: rgb(255, 255, 225);
+}
+
+.form-group.required .select2-selection__rendered {
+    background-color: rgb(255, 255, 225);
+}
+
+.form-group.required .select2-container--default .select2-selection--single {
+    background-color: rgb(255, 255, 225);
+}
+
+.select2-container--disabled .select2-selection__rendered {
+    background-color: rgb(238, 238, 238) !important;
+}
+
+/* Mandatory document input(s) */
+
+.form-group.required>input:not([disabled]) {
+    background-color: rgb(255, 255, 225);
+}
+
+.form-group.required .custom-file-label {
+    background-color: rgb(255, 255, 225);
+}
+
+/* Select2 full width input(s) */
+
+.select2 {
+    width: 100% !important;
+}
+
+/* Modal extra large */
+
+@media (min-width: 768px) {
+    .modal-xxl {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+/* Table sort icon */
+
+.sort-icon {
+    opacity: 0.3;
+    padding-right: 1px;
+}
+
+.sort-icon:hover {
+    opacity: 0.7;
+}
+
+.sort-icon-selected {
+    opacity: 0.9;
+    padding-right: 1px;
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+/* Custom checkbox formatting in tables */
+
+table .custom-control-input {
+    position: unset;
+}
+
+table .custom-control.custom-checkbox {
+    padding-left: unset;
+}
+
+/* Fix for IE 10+ positioning */
+
+_:-ms-lang(x), table .custom-control.custom-checkbox {
+    display: flex;
+}
+
+table .custom-control-label {
+    position: unset;
+    display: unset;
+}
+
+table .custom-control-label::before {
+    left: unset;
+}
+
+table .custom-control-label::after {
+    left: unset;
+}
+
+/* FullCalendar */
+
+.fc-day-grid-event>.fc-content {
+    white-space: unset !important;
+}
+
+.fc-toolbar .btn {
+    text-transform: capitalize !important;
+}
+
+/* CaseMaster */
+
+.cm-sidebar {
+    min-width: 240px;
+}
+
+.cm-content-loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900000;
+    text-align: center;
+}
